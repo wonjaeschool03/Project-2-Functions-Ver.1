@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+#count {
+  font-size: 50px;
+}
+
+button {
+  padding: 12px;
+  cursor: pointer;
+}
+
+#stepBox {
+  background: lightgray;
+  padding: 40px;
+  width: 180px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+#stepBox:hover {
+  background: lightblue;
+}
