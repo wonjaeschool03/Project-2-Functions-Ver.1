@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
   background: #f4f4f4;
-  padding: 30px;
+  padding: 120px;
 }
 
 h2 {
@@ -16,16 +16,4 @@ h2 {
 button {
   padding: 12px;
   cursor: pointer;
-}
-
-#stepBox {
-  background: lightgray;
-  padding: 40px;
-  width: 180px;
-  margin: 20px auto;
-  cursor: pointer;
-}
-
-#stepBox:hover {
-  background: lightblue;
 }
