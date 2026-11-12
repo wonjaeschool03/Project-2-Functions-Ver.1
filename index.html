@@ -1,59 +1,93 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Project 2 Tests</title>
+  <title>Project 2 - Shopping</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Does the same number of clicks represent the same day?</h1>
-  <p>What did you click today? You can only click once for each button.</p>
+  <header>
+    <div class="top-bar">
+      <a href="index.html" class="logo">store.</a>
+      <button id="cartButton">Bag (<span id="bagCount">0</span>)</button>
+    </div>
+  </header>
 
-  <div class="sections">
+  <main>
+    <h1 id="dayTitle">Day 1</h1>
+    <p id="dayDescription">Shopping for everyday necessities.</p>
 
-<section>
-  <h2>Day 1</h2>
-  <h3>Click Counter</h3>
-    <p id="count1">0</p>
-
-    <div class="products">
+    <div class="products" id="day1">
       <div class="product">
-        <h3>Shoes</h3>
-        <button class="button1">Add to Cart</button>
-        <button class="button1">Like</button>
-    </div>
-
-    <div class="product">
-      <h3>Headphones</h3>
-      <button class="button1">Add to Cart</button>
-      <button class="button1">Like</button>
-    </div>
-    </div>
-    </section>
-
-    <section>
-      <h2>Day 2</h2>
-      <h3>Click Counter</h3>
-      <p id="count2">0</p>
-
-      <div class="products">
-        <div class="product">
-          <h3>Shoes</h3>
-          <button class="button2">Add to Cart</button>
-          <button class="button2">Like</button>
-        </div>
-
-        <div class="product">
-          <h3>Headphones</h3>
-          <button class="button2">Add to Cart</button>
-          <button class="button2">Like</button>
-        </div>
+        <div class="product-image beige">☕</div>
+        <h3>Ceramic Mug</h3>
+        <p>$14.00</p>
+        <button class="add-button" data-name="Ceramic Mug" data-price="14">Add to bag</button>
       </div>
-    </section>
 
+      <div class="product">
+        <div class="product-image blue">📓</div>
+        <h3>Pocket Notebook</h3>
+        <p>$8.00</p>
+        <button class="add-button" data-name="Pocket Notebook" data-price="8">Add to bag</button>
+      </div>
+
+      <div class="product">
+        <div class="product-image pink">🕯️</div>
+        <h3>Everyday Candle</h3>
+        <p>$19.00</p>
+        <button class="add-button" data-name="Everyday Candle" data-price="19">Add to bag</button>
+      </div>
+    </div>
+
+    <div class="products" id="day2">
+      <div class="product">
+        <div class="product-image beige">👜</div>
+        <h3>Canvas Tote</h3>
+        <p>$16.00</p>
+        <button class="add-button" data-name="Canvas Tote" data-price="16">Add to bag</button>
+      </div>
+
+      <div class="product">
+        <div class="product-image blue">🧦</div>
+        <h3>Ribbed Socks</h3>
+        <p>$12.00</p>
+        <button class="add-button" data-name="Ribbed Socks" data-price="12">Add to bag</button>
+      </div>
+
+      <div class="product">
+        <div class="product-image pink">🎧</div>
+        <h3>Headphones</h3>
+        <p>$35.00</p>
+        <button class="add-button" data-name="Headphones" data-price="35">Add to bag</button>
+      </div>
+    </div>
+
+    <button id="nextButton">Continue to Day 2</button>
+
+    <div id="result">
+      <h2>Your Shopping Summary</h2>
+      <p id="day1Result"></p>
+      <p id="day2Result"></p>
+      <h3 id="comparison"></h3>
+      <p>A counter records how many times you clicked, but it doesn't explain why you made those choices.</p>
+      <p>Just like step counting, numbers cannot tell the whole story.</p>
+      <button id="restartButton">Start Again</button>
+    </div>
+  </main>
+
+  <div id="cartPopup">
+    <div class="popup-content">
+      <button id="closeCart">×</button>
+      <h3>YOUR BAG</h3>
+      <h1>Bag summary</h1>
+      <div id="cartItems"></div>
+      <h2 id="cartTotal">Total: $0.00</h2>
+      <p id="clickTotal"></p>
+      <button id="backButton">Back to shopping</button>
+    </div>
   </div>
-
-  <button id="resetButton">Reset Counts</button>
 
   <script src="script.js"></script>
 </body>
